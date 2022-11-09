@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from "react";
 import { View, StyleSheet, FlatList } from 'react-native';
-import { Button } from '../components';
+import Button from '../components/Button';
 import { fetchData } from '../requests/request';
 
 const App = (props: any) => {
