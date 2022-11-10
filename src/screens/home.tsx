@@ -1,10 +1,11 @@
 import React, {useEffect, useState} from 'react';
-import { View, StyleSheet, FlatList } from 'react-native';
+import { View, StyleSheet, FlatList, ListRenderItem } from 'react-native';
 import Button from '../components/Button';
 import { fetchData } from '../requests/request';
+import {Prop} from '../components/Item';
 
 const App = (props: any) => {
-    const [data, setData] = useState<any | null>([]);
+    const [data, setData] = useState<any>([]);
 
     useEffect(() => {
         if(data.length === 0){
@@ -12,7 +13,7 @@ const App = (props: any) => {
         }
     }, []);
 
-    const renderItem = ({ item } : any) => {
+    const renderItem: ListRenderItem<Prop> = ({ item }) => {
         return (
             <Button title={item.name} onPress={() => props.navigation.navigate('Detail', {detail: item})}/>
         );

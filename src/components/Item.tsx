@@ -1,5 +1,5 @@
 import React from 'react';
-import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
+import { View, Text, StyleSheet, Image, FlatList, ListRenderItem } from 'react-native';
 
 interface Prop {
     id: number;
@@ -10,7 +10,7 @@ interface Prop {
 }
 
 const Item = (prop: Prop) => {
-    const renderItem = ({item} : any) => {
+    const renderItem: ListRenderItem<string> = ({item}) => {
         return (
             <Image style={styles.image}
                 source={{uri: item}}/>
