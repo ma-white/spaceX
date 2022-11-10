@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react';
 import { View, StyleSheet, Button } from 'react-native';
 import {Item, Prop} from '../components/Item';
 
@@ -7,10 +7,10 @@ const App = (props: any) => {
     return (
         <View style={styles.container}>
             <Item {...launch}/>
-            <Button title="Back" onPress={() => props.navigation.navigate("Home")}/>
+            <Button title="Back" onPress={() => props.navigation.navigate('Home')}/>
         </View>
-    )
-}
+    );
+};
 
 export default App;
 
@@ -20,4 +20,4 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
         alignItems: 'center'
     }
-})
+});

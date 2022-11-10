@@ -1,5 +1,5 @@
-import React from "react";
-import { View, Text, StyleSheet, Image, FlatList } from "react-native";
+import React from 'react';
+import { View, Text, StyleSheet, Image, FlatList } from 'react-native';
 
 interface Prop {
     id: number;
@@ -14,8 +14,8 @@ const Item = (prop: Prop) => {
         return (
             <Image style={styles.image}
                 source={{uri: item}}/>
-        )
-    }
+        );
+    };
     const success = `This Launch Resulted In a ${prop.success ? 'Success' : 'Failure'}`;
     return (
         <View style={styles.container}>
@@ -27,8 +27,8 @@ const Item = (prop: Prop) => {
                 renderItem={renderItem}
                 key={prop.id}/>
         </View>
-    )
-}
+    );
+};
 
 export {Item, Prop};
 
@@ -57,4 +57,4 @@ const styles = StyleSheet.create({
         width: 300,
         height: 300
     }
-})
+});

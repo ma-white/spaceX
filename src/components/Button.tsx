@@ -1,5 +1,5 @@
-import React from "react";
-import { TouchableOpacity, Text, StyleSheet } from "react-native";
+import React from 'react';
+import { TouchableOpacity, Text, StyleSheet } from 'react-native';
 
 interface Prop {
     title: string;
@@ -9,11 +9,11 @@ interface Prop {
 const Button = (prop: Prop) => {
     return (
         <TouchableOpacity style={styles.button}
-                onPress={prop.onPress}>
+            onPress={prop.onPress}>
             <Text style={styles.text}>{prop.title}</Text>
         </TouchableOpacity>
-    )
-}
+    );
+};
 
 export default Button;
 
@@ -30,4 +30,4 @@ const styles = StyleSheet.create({
         color: '#000',
         fontSize: 16
     }
-})
+});

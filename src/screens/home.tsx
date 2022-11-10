@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useEffect, useState} from 'react';
 import { View, StyleSheet, FlatList } from 'react-native';
 import Button from '../components/Button';
 import { fetchData } from '../requests/request';
@@ -14,9 +14,9 @@ const App = (props: any) => {
 
     const renderItem = ({ item } : any) => {
         return (
-            <Button title={item.name} onPress={() => props.navigation.navigate("Detail", {detail: item})}/>
-        )
-    }
+            <Button title={item.name} onPress={() => props.navigation.navigate('Detail', {detail: item})}/>
+        );
+    };
     return (
         <View style={styles.container}>
             {data && (
@@ -28,22 +28,22 @@ const App = (props: any) => {
                 />
             )}
         </View>
-    )
-}
+    );
+};
 
 export default App;
 
 const styles = StyleSheet.create({
     container: {
-        display: "flex",
+        display: 'flex',
         flexDirection: 'column',
         flexGrow: 1,
         alignItems: 'flex-start',
         alignContent: 'flex-start'
     },
     list: {
-        display: "flex",
+        display: 'flex',
         justifyContent: 'space-between',
         marginHorizontal: 15
     }
-})
+});
