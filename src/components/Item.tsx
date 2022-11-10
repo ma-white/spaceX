@@ -17,10 +17,11 @@ const Item = (prop: Prop) => {
         );
     };
     const success = `This Launch Resulted In a ${prop.success ? 'Success' : 'Failure'}`;
+    const details = prop.details ? prop.details : 'No detatils on launch';
     return (
         <View style={styles.container}>
             <Text style={styles.header}>{prop.name}</Text>
-            <Text style={styles.details}>{prop.details}</Text>
+            <Text style={styles.details}>{details}</Text>
             <Text style={styles.success}>{success}</Text>
             <FlatList
                 data={prop.images}
